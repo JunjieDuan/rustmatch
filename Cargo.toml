@@ -1,0 +1,30 @@
+[package]
+name = "rustmatch"
+version = "0.1.0"
+edition = "2021"
+authors = ["Junjie Duan <nerve_nerve@163.com>"]
+description = "High-performance template matching library for Python"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/JunjieDuan/rustmatch"
+keywords = ["template-matching", "image-processing", "ncc", "python"]
+categories = ["multimedia::images", "science"]
+rust-version = "1.70"
+
+[lib]
+name = "rustmatch"
+crate-type = ["cdylib"]
+
+[dependencies]
+pyo3 = { version = "0.20", features = ["extension-module"] }
+image = "0.24"
+rayon = "1.8"
+num_cpus = "1.16"
+
+[profile.release]
+lto = true
+codegen-units = 1
+opt-level = 3
+strip = true
+
+[profile.release.package."*"]
+opt-level = 3
