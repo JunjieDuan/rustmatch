@@ -127,7 +127,16 @@ cd rustmatch
 maturin build --release
 pip install target/wheels/rustmatch-*.whl
 ```
+## Disclaimer
+
+This software is provided "as is", without warranty of any kind. Use at your own risk.
+
+- This is an independent open-source project, not affiliated with or endorsed by the Rust Foundation or the Rust programming language team.
+- The "Rust" name is used to indicate that this library is implemented in the Rust programming language.
+- The authors are not responsible for any damages or losses resulting from the use of this software.
+- This library is intended for legitimate use cases such as UI automation, testing, and image analysis. Users are responsible for ensuring their use complies with applicable laws and regulations.
 
 ## License
 
 Dual-licensed under MIT or Apache-2.0.
+
